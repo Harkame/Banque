@@ -1,1 +1,1 @@
-Projet (Scolaire) de simulation d'une banque (simplifié)
+Projet (scolaire) de simulation d'une banque (simplifié)
