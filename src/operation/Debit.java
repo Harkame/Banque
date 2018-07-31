@@ -4,24 +4,21 @@ import compte.*;
 import compte.remunere.PlanEpargneBloque;
 import exception.OperationBancaireException;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public class Debit extends Operation {
+public class Debit extends Operation
+{
 
 	/**
 	 * Constructeur - Debit
 	 * 
 	 * @param libelle
-	 *            Nom du compte
+	 *             Nom du compte
 	 * @param compte
-	 *            Compte a debiter
+	 *             Compte a debiter
 	 * @param montant
-	 *            Montant a debiter
+	 *             Montant a debiter
 	 */
-	public Debit(String libelle, Compte compte, double montant) {
+	public Debit(String libelle, Compte compte, double montant)
+	{
 		super(libelle, compte, montant);
 		System.out.println("Creation Debit");
 		System.out.println("              - Libelle : " + this.getLibelle());
@@ -35,43 +32,51 @@ public class Debit extends Operation {
 	 * sinon leve une exception
 	 * 
 	 * @throws OperationBancaireException
-	 *             Montant negatif | Solde insuffisant
+	 *              Montant negatif | Solde insuffisant
 	 */
 
-	public void DebitPossible() throws OperationBancaireException {
-		if (this.statut == Statut.Attente) {
-			if (this.getMontant() < 0) {
+	public void DebitPossible() throws OperationBancaireException
+	{
+		if(this.statut == Statut.Attente)
+		{
+			if(this.getMontant() < 0)
+			{
 				this.statut = Statut.KO;
 				throw new OperationBancaireException("Montant negatif");
 			}
-			if (this.getCompte().getSolde() < this.getMontant()) {
+			if(this.getCompte().getSolde() < this.getMontant())
+			{
 				this.statut = Statut.KO;
 				throw new OperationBancaireException("Solde insuffisant");
 			}
 			this.setStatut(Statut.OK);
-			if (this.getCompte() instanceof PlanEpargneBloque) {
-				if (this.getDate() != ((PlanEpargneBloque) this.getCompte()).getDate()) { // Je
-																							// ne
-																							// savais
-																							// pas
-																							// comment
-																							// dire
-																							// que
-																							// la
-																							// date
-																							// de
-																							// l'operation
-																							// devait
-																							// être
-																							// <
-																							// celle
-																							// autorise
+			if(this.getCompte() instanceof PlanEpargneBloque)
+			{
+				if(this.getDate() != ((PlanEpargneBloque) this.getCompte()).getDate())
+				{ // Je
+					// ne
+					// savais
+					// pas
+					// comment
+					// dire
+					// que
+					// la
+					// date
+					// de
+					// l'operation
+					// devait
+					// être
+					// <
+					// celle
+					// autorise
 					this.statut = Statut.KO;
 					throw new OperationBancaireException("Date non autorise");
 				}
 			}
 			this.statut = Statut.OK;
-		} else if (this.statut != Statut.Attente) {
+		}
+		else if(this.statut != Statut.Attente)
+		{
 		}
 	}
 
@@ -79,13 +84,16 @@ public class Debit extends Operation {
 	 * Active le debit (this)
 	 * 
 	 * @throws OperationBancaireException
-	 *             Montant negatif | Solde insuffisant
+	 *              Montant negatif | Solde insuffisant
 	 */
-	public void passerDebit() throws OperationBancaireException {
+	public void passerDebit() throws OperationBancaireException
+	{
 		this.DebitPossible();
-		if (this.statut == Statut.OK) {
+		if(this.statut == Statut.OK)
+		{
 			this.getCompte().Debiter(this.getMontant());
-		} else
+		}
+		else
 			throw new OperationBancaireException("");
 
 	}

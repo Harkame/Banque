@@ -1,10 +1,5 @@
 package exception;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
 public class OperationBancaireException extends Exception {
 	/**
 	 * 

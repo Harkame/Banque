@@ -4,11 +4,6 @@ import java.util.ArrayList;
 
 import operation.Operation;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
 public abstract class Compte {
 	private final int				idCompte;
 	private static int				incr;
@@ -26,9 +21,9 @@ public abstract class Compte {
 	 * Constructeur - Compte
 	 * 
 	 * @param libelle
-	 *            Nom du compte
+	 *             Nom du compte
 	 * @param solde
-	 *            Somme d'argent sur le compte
+	 *             Somme d'argent sur le compte
 	 */
 	public Compte(String libelle, double solde) {
 		this.idCompte = incr++;

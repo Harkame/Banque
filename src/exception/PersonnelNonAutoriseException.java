@@ -1,11 +1,7 @@
 package exception;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public class PersonnelNonAutoriseException extends Exception {
+public class PersonnelNonAutoriseException extends Exception
+{
 	/**
 	 * 
 	 */
@@ -14,9 +10,10 @@ public class PersonnelNonAutoriseException extends Exception {
 	/**
 	 * 
 	 * @param message
-	 *            Message d'erreure a afficher
+	 *             Message d'erreure a afficher
 	 */
-	public PersonnelNonAutoriseException(String message) {
+	public PersonnelNonAutoriseException(String message)
+	{
 		System.err.println(message);
 	}
 }

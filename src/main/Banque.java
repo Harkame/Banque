@@ -7,18 +7,15 @@ import operation.*;
 import ordre_virement.*;
 import personne.*;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public abstract class Banque {
+public abstract class Banque
+{
 
 	/**
 	 * methode qui permet de sauter une ligne
 	 * 
 	 **/
-	public static void AffNull() {
+	public static void AffNull()
+	{
 		System.out.println("");
 	}
 
@@ -26,16 +23,19 @@ public abstract class Banque {
 	 * Main principal
 	 * 
 	 * @param Args
-	 *            Possible argument passer en ligne de commande
+	 *             Possible argument passer en ligne de commande
 	 * 
 	 * @throws OperationBancaireException
-	 *             Montant negatif | Solde plafond depasse| Solde negatif
+	 *              Montant negatif | Solde plafond depasse| Solde negatif
 	 * @throws PersonnelNonAutoriseException
-	 *             L'attache n'est pas associe au client proprietaire du compte
+	 *              L'attache n'est pas associe au client proprietaire du
+	 *              compte
 	 */
 	@SuppressWarnings("unused")
-	public static void main(String[] Args) throws OperationBancaireException, PersonnelNonAutoriseException {
-		System.err.println("Il est possible que certain messages, nottement d'erreure ne se place pas au bon endroit, si cela arrive, veuillez relancer le programme, merci");
+	public static void main(String[] Args) throws OperationBancaireException, PersonnelNonAutoriseException
+	{
+		System.err.println(
+			"Il est possible que certain messages, nottement d'erreure ne se place pas au bon endroit, si cela arrive, veuillez relancer le programme, merci");
 		AffNull();
 		System.out.println("------------------------------------");
 		System.out.println("--- Jeux de test 1 - Les comptes ---");
@@ -81,9 +81,12 @@ public abstract class Banque {
 		cc1.ConsultHistorique();
 		cc1.ConsultationSolde();
 		Debit d2 = new Debit("Debit2", cc1, 2500);
-		try {
+		try
+		{
 			d2.passerDebit();
-		} catch (OperationBancaireException e) {
+		}
+		catch(OperationBancaireException e)
+		{
 			System.out.println("Debit rejete");
 		}
 		cc1.ConsultationSolde();
@@ -100,17 +103,23 @@ public abstract class Banque {
 		Ordre_Virement o_v1 = new Ordre_Virement(c, cc1, ce1, 666);
 		o_v1.PasserOrdre_Virement();
 		Ordre_Virement o_v2 = new Ordre_Virement(c, cc1, ce1, 10000);
-		try {
+		try
+		{
 			o_v2.PasserOrdre_Virement();
-		} catch (OperationBancaireException e) {
+		}
+		catch(OperationBancaireException e)
+		{
 			System.err.println("Ordre de virement rejete - KO");
 			o_v2.miseEchec();
 		}
 
 		Ordre_Virement o_v3 = new Ordre_Virement(c, cc1, ce1, 10);
-		try {
+		try
+		{
 			o_v3.PasserOrdre_Virement();
-		} catch (OperationBancaireException e) {
+		}
+		catch(OperationBancaireException e)
+		{
 			System.err.println("Ordre de virement rejete - Mise en attente"); // L'exception
 		}
 		o_v3.miseAttente();
@@ -119,8 +128,10 @@ public abstract class Banque {
 		System.out.println("------------------------------------------------");
 		System.out.println("--- Question 4.2 - Remarque message d'alerte ---");
 		System.out.println("------------------------------------------------");
-		System.out.println("Selon la vitesse de relance du programme, les message d'alerte ne se situe pas au même endroit");
-		System.out.println("Ces messages se trouve dans des bloc catch, ces dernier sont secondaire par rapport au reste du programme");
+		System.out.println(
+			"Selon la vitesse de relance du programme, les message d'alerte ne se situe pas au même endroit");
+		System.out.println(
+			"Ces messages se trouve dans des bloc catch, ces dernier sont secondaire par rapport au reste du programme");
 		System.out.println("La memoire va d'abord s'occuper du code, puis des bloc catch");
 		AffNull();
 		System.out.println("---------------------------------------------------------------------");

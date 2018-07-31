@@ -1,20 +1,17 @@
 package personne;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public abstract class Personne {
+public abstract class Personne
+{
 	private String nom;
 
 	/**
 	 * Constructeur - Personne
 	 * 
 	 * @param nom
-	 *            Nom de la personne
+	 *             Nom de la personne
 	 */
-	public Personne(String nom) {
+	public Personne(String nom)
+	{
 		this.nom = nom;
 	}
 
@@ -23,7 +20,8 @@ public abstract class Personne {
 	 * 
 	 * @return this.nom
 	 */
-	public String getNom() {
+	public String getNom()
+	{
 		return this.nom;
 	}
 }

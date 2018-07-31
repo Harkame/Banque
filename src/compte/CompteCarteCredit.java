@@ -1,20 +1,17 @@
 package compte;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public class CompteCarteCredit extends Compte {
+public class CompteCarteCredit extends Compte
+{
 	/**
 	 * Constructeur - Compte carte de credit
 	 * 
 	 * @param libelle
-	 *            Nom du compte
+	 *             Nom du compte
 	 * @param solde
-	 *            Somme d'argent sur le compte
+	 *             Somme d'argent sur le compte
 	 */
-	public CompteCarteCredit(String libelle, int solde) {
+	public CompteCarteCredit(String libelle, int solde)
+	{
 		super(libelle, solde);
 		System.out.println("Creation du compte carte de credit ");
 		System.out.println("                                 - Identifiant : " + this.getidCompte());

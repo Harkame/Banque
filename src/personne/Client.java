@@ -4,30 +4,27 @@ import java.util.ArrayList;
 
 import compte.*;
 import compte.Compte.Statut;
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public class Client extends Personne {
-	private final int idClient;
-	private static int incr;
-	private ArrayList<Compte> tabCompte;
+
+public class Client extends Personne
+{
+	private final int			idClient;
+	private static int			incr;
+	private ArrayList<Compte>	tabCompte;
 
 	/**
 	 * Constructeur - Client
 	 * 
 	 * @param nom
-	 *            Nom du client
+	 *             Nom du client
 	 */
-	public Client(String nom) {
+	public Client(String nom)
+	{
 		super(nom);
 		this.idClient = incr++;
 		this.tabCompte = new ArrayList<Compte>();
 		System.out.println("Creation client");
 		System.out.println("              - Nom : " + this.getNom());
-		System.out
-				.println("              - Identifiant :" + this.getidClient());
+		System.out.println("              - Identifiant :" + this.getidClient());
 		System.out.println("");
 	}
 
@@ -37,7 +34,8 @@ public class Client extends Personne {
 	 * @return this.getNom();
 	 */
 
-	public String getNomClient() {
+	public String getNomClient()
+	{
 		return this.getNom();
 	}
 
@@ -45,18 +43,19 @@ public class Client extends Personne {
 	 * permet d'attribuer un compte, a un client (this)
 	 * 
 	 * @param compte
-	 *            Compte a attribuer
+	 *             Compte a attribuer
 	 */
-	public void AttribuerCompte(Compte compte) {
-		if (compte.getStatut().equals(Statut.Attente)) {
+	public void AttribuerCompte(Compte compte)
+	{
+		if(compte.getStatut().equals(Statut.Attente))
+		{
 			this.tabCompte.add(compte);
 			System.out.println("Attribution Compte");
-			System.out.println("                 - Compte : "
-					+ compte.getidCompte());
-			System.out.println("                 - Client : "
-					+ this.getidClient());
+			System.out.println("                 - Compte : " + compte.getidCompte());
+			System.out.println("                 - Client : " + this.getidClient());
 			compte.setStatut(Statut.Attribue);
-		} else
+		}
+		else
 			System.out.println("Compte deja attribue");
 		System.out.println("");
 	}
@@ -65,12 +64,15 @@ public class Client extends Personne {
 	 * Permet de savoir si un compte appartient a un Client (this)
 	 * 
 	 * @param compte
-	 *            Compte a verifier
+	 *             Compte a verifier
 	 * @return true Si le compte appartient au Client 'this)
 	 */
-	public boolean appartient(Compte compte) {
-		for (int i = 0; i < this.gettabCompte().size(); i++) {
-			if (this.gettabCompte().get(i) == compte) {
+	public boolean appartient(Compte compte)
+	{
+		for(int i = 0; i < this.gettabCompte().size(); i++)
+		{
+			if(this.gettabCompte().get(i) == compte)
+			{
 				return true;
 			}
 		}
@@ -83,7 +85,8 @@ public class Client extends Personne {
 	 * @return this.tabCompte;
 	 */
 
-	public ArrayList<Compte> gettabCompte() {
+	public ArrayList<Compte> gettabCompte()
+	{
 		return this.tabCompte;
 	}
 
@@ -92,7 +95,8 @@ public class Client extends Personne {
 	 * 
 	 * @return this.idClient
 	 */
-	public int getidClient() {
+	public int getidClient()
+	{
 		return this.idClient;
 	}
 

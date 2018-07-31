@@ -4,20 +4,17 @@ import java.util.*;
 
 import compte.*;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public abstract class Operation {
+public abstract class Operation
+{
 	private final int	numero_operation;
 	private static int	incr;
-	private String	libelle;
+	private String		libelle;
 	private Date		date;
 	private Compte		compte;
 	private double		montant;
 
-	protected enum Statut {
+	protected enum Statut
+	{
 		OK, KO, Attente
 	}
 
@@ -27,13 +24,14 @@ public abstract class Operation {
 	 * Constructeur - Operation
 	 * 
 	 * @param libelle
-	 *            Nom du compte
+	 *             Nom du compte
 	 * @param compte
-	 *            Compte sur lequel faire une operation
+	 *             Compte sur lequel faire une operation
 	 * @param montant
-	 *            Montant a debiter/crediter
+	 *             Montant a debiter/crediter
 	 */
-	public Operation(String libelle, Compte compte, double montant) {
+	public Operation(String libelle, Compte compte, double montant)
+	{
 		this.numero_operation = incr++;
 		this.libelle = libelle;
 		this.compte = compte;
@@ -43,7 +41,8 @@ public abstract class Operation {
 		compte.getHistorique().add(this);
 	}
 
-	public int getidOperation() {
+	public int getidOperation()
+	{
 		return this.numero_operation;
 	}
 
@@ -52,7 +51,8 @@ public abstract class Operation {
 	 * 
 	 * @return this.libelle
 	 */
-	public String getLibelle() {
+	public String getLibelle()
+	{
 		return this.libelle;
 	}
 
@@ -61,7 +61,8 @@ public abstract class Operation {
 	 * 
 	 * @return this.statut
 	 */
-	public Statut getStatut() {
+	public Statut getStatut()
+	{
 		return this.statut;
 	}
 
@@ -69,9 +70,10 @@ public abstract class Operation {
 	 * Setter - Statut d'une operation (this)
 	 * 
 	 * @param statut
-	 *            Nouveau statut
+	 *             Nouveau statut
 	 */
-	public void setStatut(Statut statut) {
+	public void setStatut(Statut statut)
+	{
 		this.statut = statut;
 	}
 
@@ -80,7 +82,8 @@ public abstract class Operation {
 	 * 
 	 * @return this.date
 	 */
-	public Date getDate() {
+	public Date getDate()
+	{
 		return this.date;
 	}
 
@@ -89,7 +92,8 @@ public abstract class Operation {
 	 * 
 	 * @return this.montant
 	 */
-	public double getMontant() {
+	public double getMontant()
+	{
 		return this.montant;
 	}
 
@@ -98,21 +102,24 @@ public abstract class Operation {
 	 * 
 	 * @return this.compte
 	 */
-	public Compte getCompte() {
+	public Compte getCompte()
+	{
 		return this.compte;
 	}
 
 	/**
 	 * Permet de faire apsser le statut d'une operation en Attente
 	 */
-	public void miseAttente() {
+	public void miseAttente()
+	{
 		this.statut = Statut.Attente;
 	}
 
 	/**
 	 * Permet de faire passer le statut d'une operation a KO
 	 */
-	public void miseEchec() {
+	public void miseEchec()
+	{
 		this.statut = Statut.KO;
 	}
 

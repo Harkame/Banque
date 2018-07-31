@@ -1,20 +1,17 @@
 package compte;
 
-/**
- * 
- * @author Louis Daviaud
- *
- */
-public class CompteCourant extends Compte {
+public class CompteCourant extends Compte
+{
 	/**
 	 * Constructeur - Compte courant
 	 * 
 	 * @param libelle
-	 *            Nom du compte
+	 *             Nom du compte
 	 * @param solde
-	 *            Montant d'argent sur le compte
+	 *             Montant d'argent sur le compte
 	 */
-	public CompteCourant(String libelle, double solde) {
+	public CompteCourant(String libelle, double solde)
+	{
 		super(libelle, solde);
 		System.out.println("Creation du compte courant ");
 		System.out.println("                         - Identifiant : " + this.getidCompte());
