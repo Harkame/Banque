@@ -1,9 +1,9 @@
-package fr.harkame.banque.ordre_virement;
+package fr.harkame.banque.model.ordre_virement;
 
-import fr.harkame.banque.compte.*;
-import fr.harkame.banque.exception.OperationBancaireException;
-import fr.harkame.banque.operation.*;
-import fr.harkame.banque.personne.Client;
+import fr.harkame.banque.model.compte.*;
+import fr.harkame.banque.model.exception.OperationBancaireException;
+import fr.harkame.banque.model.operation.*;
+import fr.harkame.banque.model.personne.Client;
 
 public class Ordre_Virement
 {

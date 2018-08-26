@@ -1,8 +1,8 @@
-package fr.harkame.banque.compte.remunere;
+package fr.harkame.banque.model.compte.remunere;
 
 import java.util.Date;
 
-import fr.harkame.banque.exception.OperationBancaireException;
+import fr.harkame.banque.model.exception.OperationBancaireException;
 
 /**
  * 

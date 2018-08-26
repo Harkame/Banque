@@ -1,8 +1,8 @@
-package fr.harkame.banque.operation;
+package fr.harkame.banque.model.operation;
 
-import fr.harkame.banque.compte.*;
-import fr.harkame.banque.compte.remunere.PlanEpargneBloque;
-import fr.harkame.banque.exception.OperationBancaireException;
+import fr.harkame.banque.model.compte.*;
+import fr.harkame.banque.model.compte.remunere.PlanEpargneBloque;
+import fr.harkame.banque.model.exception.OperationBancaireException;
 
 public class Debit extends Operation
 {

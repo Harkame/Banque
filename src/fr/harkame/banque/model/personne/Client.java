@@ -1,9 +1,9 @@
-package fr.harkame.banque.personne;
+package fr.harkame.banque.model.personne;
 
 import java.util.ArrayList;
 
-import fr.harkame.banque.compte.*;
-import fr.harkame.banque.compte.Compte.Statut;
+import fr.harkame.banque.model.compte.*;
+import fr.harkame.banque.model.compte.Compte.Statut;
 
 public class Client extends Personne
 {

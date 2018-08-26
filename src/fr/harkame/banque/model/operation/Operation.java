@@ -1,8 +1,8 @@
-package fr.harkame.banque.operation;
+package fr.harkame.banque.model.operation;
 
 import java.util.*;
 
-import fr.harkame.banque.compte.*;
+import fr.harkame.banque.model.compte.*;
 
 public abstract class Operation
 {

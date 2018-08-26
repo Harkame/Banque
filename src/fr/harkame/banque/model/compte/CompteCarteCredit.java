@@ -1,4 +1,4 @@
-package fr.harkame.banque.compte;
+package fr.harkame.banque.model.compte;
 
 public class CompteCarteCredit extends Compte
 {

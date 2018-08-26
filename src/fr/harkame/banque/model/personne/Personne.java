@@ -1,4 +1,4 @@
-package fr.harkame.banque.personne;
+package fr.harkame.banque.model.personne;
 
 public abstract class Personne
 {

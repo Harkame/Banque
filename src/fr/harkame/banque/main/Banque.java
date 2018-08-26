@@ -1,11 +1,11 @@
 package fr.harkame.banque.main;
 
-import fr.harkame.banque.compte.*;
-import fr.harkame.banque.compte.remunere.*;
-import fr.harkame.banque.exception.*;
-import fr.harkame.banque.operation.*;
-import fr.harkame.banque.ordre_virement.*;
-import fr.harkame.banque.personne.*;
+import fr.harkame.banque.model.compte.*;
+import fr.harkame.banque.model.compte.remunere.*;
+import fr.harkame.banque.model.exception.*;
+import fr.harkame.banque.model.operation.*;
+import fr.harkame.banque.model.ordre_virement.*;
+import fr.harkame.banque.model.personne.*;
 
 public abstract class Banque
 {

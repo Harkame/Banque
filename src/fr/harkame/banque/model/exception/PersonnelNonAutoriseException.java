@@ -1,4 +1,4 @@
-package fr.harkame.banque.exception;
+package fr.harkame.banque.model.exception;
 
 public class PersonnelNonAutoriseException extends Exception
 {

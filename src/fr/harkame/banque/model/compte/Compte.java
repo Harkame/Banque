@@ -1,8 +1,8 @@
-package fr.harkame.banque.compte;
+package fr.harkame.banque.model.compte;
 
 import java.util.ArrayList;
 
-import fr.harkame.banque.operation.Operation;
+import fr.harkame.banque.model.operation.Operation;
 
 public abstract class Compte {
 	private final int				idCompte;

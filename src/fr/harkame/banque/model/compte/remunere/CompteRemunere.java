@@ -1,7 +1,7 @@
-package fr.harkame.banque.compte.remunere;
+package fr.harkame.banque.model.compte.remunere;
 
-import fr.harkame.banque.compte.Compte;
-import fr.harkame.banque.exception.OperationBancaireException;
+import fr.harkame.banque.model.compte.Compte;
+import fr.harkame.banque.model.exception.OperationBancaireException;
 
 public abstract class CompteRemunere extends Compte
 {

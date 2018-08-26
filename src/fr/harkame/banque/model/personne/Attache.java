@@ -1,11 +1,11 @@
-package fr.harkame.banque.personne;
+package fr.harkame.banque.model.personne;
 
 import java.util.ArrayList;
 
-import fr.harkame.banque.compte.Compte;
-import fr.harkame.banque.exception.OperationBancaireException;
-import fr.harkame.banque.exception.PersonnelNonAutoriseException;
-import fr.harkame.banque.operation.*;
+import fr.harkame.banque.model.compte.Compte;
+import fr.harkame.banque.model.exception.OperationBancaireException;
+import fr.harkame.banque.model.exception.PersonnelNonAutoriseException;
+import fr.harkame.banque.model.operation.*;
 
 public class Attache extends Personne
 {
